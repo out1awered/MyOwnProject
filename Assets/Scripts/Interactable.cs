@@ -62,12 +62,12 @@ public class Interactable : MonoBehaviour
                 if (inventoryManager == null ||
                     !inventoryManager.UseKey())
                 {
-                    Debug.Log("没有钥匙，无法解锁！");
+                    
                     return;
                 }
 
                 doorController.UnlockDoor();
-                Debug.Log("成功消耗一把钥匙并解锁！");
+                
             }
 
             doorController.ToggleDoor();

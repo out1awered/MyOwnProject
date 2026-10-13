@@ -65,13 +65,18 @@ public class CameraFollow : MonoBehaviour
 
         rotationY = transform.eulerAngles.y;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+       
         playerRenderers = player.GetComponentsInChildren<Renderer>();
     }
 
     void LateUpdate()
     {
+        // 游戏暂停时，不执行相机控制
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
+
         // 按 V 切换视角
         if (Input.GetKeyDown(KeyCode.V))
         {
