@@ -1,35 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
     public float rotationSpeed = 90f;
 
-    private bool isOpen = false;
+    // 门打开的旋转角度
+    public float openAngle = 90f;
 
-    public bool IsOpen()
-    {
-        return isOpen;
-    }
+    private bool isOpen = false;
 
     public bool isLocked = true;
 
-
-
     private Quaternion closedRotation;
-    private Quaternion openRotation;
 
     void Start()
     {
+        // 记录门关闭时的初始角度
         closedRotation = transform.localRotation;
-
-        openRotation = closedRotation *
-            Quaternion.Euler(0, 90, 0);
     }
 
     void Update()
     {
+        // 根据 Inspector 中的角度计算开门方向
+        Quaternion openRotation = closedRotation *
+            Quaternion.Euler(0, openAngle, 0);
+
         Quaternion targetRotation;
 
         if (isOpen)
@@ -49,8 +47,6 @@ public class DoorController : MonoBehaviour
             );
     }
 
-
-
     public void ToggleDoor()
     {
         if (isLocked)
@@ -59,6 +55,11 @@ public class DoorController : MonoBehaviour
         }
 
         isOpen = !isOpen;
+    }
+
+    public bool IsOpen()
+    {
+        return isOpen;
     }
 
     public bool IsLocked()
@@ -71,3 +72,4 @@ public class DoorController : MonoBehaviour
         isLocked = false;
     }
 }
+
