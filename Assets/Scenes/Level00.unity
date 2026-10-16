@@ -2482,6 +2482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 90
+  openAngle: 90
   isLocked: 1
 --- !u!1 &643411459
 GameObject:
@@ -3748,6 +3749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 90
+  openAngle: 90
   isLocked: 1
 --- !u!1001 &1182564966
 PrefabInstance:
@@ -5842,8 +5844,87 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1490833615874535314, guid: 08d6ec9c0b97b104993d3a0f33a757e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2334466774099100217}
+    - targetCorrespondingSourceObject: {fileID: 1490833615874535314, guid: 08d6ec9c0b97b104993d3a0f33a757e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2334466774099100216}
+    - targetCorrespondingSourceObject: {fileID: 1490833615874535314, guid: 08d6ec9c0b97b104993d3a0f33a757e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2334466774099100215}
+    - targetCorrespondingSourceObject: {fileID: 1490833615874535314, guid: 08d6ec9c0b97b104993d3a0f33a757e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2334466774099100214}
   m_SourcePrefab: {fileID: 100100000, guid: 08d6ec9c0b97b104993d3a0f33a757e7, type: 3}
+--- !u!1 &2334466774099100213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1490833615874535314, guid: 08d6ec9c0b97b104993d3a0f33a757e7, type: 3}
+  m_PrefabInstance: {fileID: 2334466774099100212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2334466774099100214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334466774099100213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffe2fd9e8b70dc4b8a46e7d7457f915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathManager: {fileID: 0}
+  deathHeight: -15
+--- !u!114 &2334466774099100215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334466774099100213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3888bf776a23649b8c3bc77e431e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
+  respawnController: {fileID: 0}
+  deathRules: []
+--- !u!114 &2334466774099100216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334466774099100213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632913da04bd54b4fb30b1dbb6064ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointManager: {fileID: 0}
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  respawnHeight: 8
+  groundCheckRadius: 0.2
+  maxLandingWait: 12
+--- !u!114 &2334466774099100217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334466774099100213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758613b04c481174b87c4e1f737990fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialCheckpoint: {fileID: 0}
 --- !u!1001 &7467136439985528568
 PrefabInstance:
   m_ObjectHideFlags: 0
